@@ -6,7 +6,9 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { AppHeader } from "@/components/app/app-header"
 import { Panel } from "@/components/app/panel"
 import { StatusBadge } from "@/components/app/status-badge"
-import { activity, caseLabel, cases, clients, firm, tasks } from "@/lib/data"
+import { activity, caseLabel, cases, clients, firm, tasks as allTasks } from "@/lib/data"
+
+const tasks = allTasks.filter((t) => !t.done)
 
 const stats = [
   { value: cases.filter((c) => c.status !== "closed").length, label: "Open cases" },

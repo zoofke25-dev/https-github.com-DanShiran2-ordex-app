@@ -20,6 +20,7 @@ export type Task = {
   id: string
   title: string
   caseId: string
+  assignee: string
   due: string
   overdue?: boolean
   done?: boolean
@@ -67,11 +68,14 @@ export const cases: Case[] = [
 ]
 
 export const tasks: Task[] = [
-  { id: "t1", title: "Approve settlement letter wording", caseId: "C-1017", due: "18 Sep", overdue: true },
-  { id: "t2", title: "Reply to client on fee note query", caseId: "C-1029", due: "21 Sep", overdue: true },
-  { id: "t3", title: "Sign engagement letter", caseId: "C-1046", due: "Today" },
-  { id: "t4", title: "Review revised payment clause", caseId: "C-1042", due: "23 Sep" },
-  { id: "t5", title: "Review lease renewal terms", caseId: "C-1033", due: "25 Sep" },
+  { id: "t1", title: "Approve settlement letter wording", caseId: "C-1017", assignee: "Yael Shalev", due: "18 Sep", overdue: true },
+  { id: "t2", title: "Reply to client on fee note query", caseId: "C-1029", assignee: "Yael Shalev", due: "21 Sep", overdue: true },
+  { id: "t3", title: "Sign engagement letter", caseId: "C-1046", assignee: "Yael Shalev", due: "Today" },
+  { id: "t4", title: "Review revised payment clause", caseId: "C-1042", assignee: "Yael Shalev", due: "23 Sep" },
+  { id: "t5", title: "Review lease renewal terms", caseId: "C-1033", assignee: "Yael Shalev", due: "25 Sep" },
+  { id: "t6", title: "Prepare signing copy", caseId: "C-1058", assignee: "Tamar Rosen", due: "21 Sep", done: true },
+  { id: "t7", title: "Send demand letter", caseId: "C-1051", assignee: "Oren Dagan", due: "10 Sep", done: true },
+  { id: "t8", title: "Draft engagement letter", caseId: "C-1046", assignee: "Noam Levi", due: "18 Sep", done: true },
 ]
 
 export const activity: Activity[] = [
